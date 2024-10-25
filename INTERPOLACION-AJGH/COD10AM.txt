@@ -1,0 +1,16 @@
+% Datos conocidos
+t1 = 8;    % Hora en la que se mide la primera temperatura (8:00 AM)
+T1 = 20;   % Temperatura a las 8:00 AM (en grados Celsius)
+
+t2 = 12;   % Hora en la que se mide la segunda temperatura (12:00 PM)
+T2 = 30;   % Temperatura a las 12:00 PM (en grados Celsius)
+
+% Hora en la que se desea estimar la temperatura
+t = 10;    % Hora (10:00 AM)
+
+% Aplicación de la fórmula de interpolación lineal
+T = T1 + ((T2 - T1) * (t - t1)) / (t2 - t1);
+
+% Mostrar el resultado
+fprintf('La temperatura estimada a las %d:00 AM es de %.2f°C.\n', t, T);
+
